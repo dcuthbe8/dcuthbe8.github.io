@@ -18,11 +18,10 @@ h1, h2, h3
 	text-align: center;
 	line-height: 0px;
 }
-
 a
 {
 	text-decoration: none;
-	color: green;
+	color: black;
 	font-weight: bold;
 }
 
@@ -54,6 +53,7 @@ body
 {
 	width: 750px;
 	margin: 0 auto;
+	
 }
 
 table
