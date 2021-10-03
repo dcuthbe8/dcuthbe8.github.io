@@ -93,3 +93,18 @@ tbody tr:nth-child(even) td
 {
 	background-color: white;
 }
+ input[type="button"]
+         {
+         background-color:orange;
+         color: teal;
+         border: solid black 5px;
+         width:100%
+		 }
+ .title{
+		font-weight: bold;
+         margin-bottom: 10px;
+        margin: 20px;
+         width: 280px;
+         color:blue;
+         border: solid black 3px;
+         }
