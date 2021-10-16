@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 15px;
+        }
+        </style>
+    <script>
+        let person = ["Person 1", "Person 2"];
+        let salaries = [22000, 23000];
+        
+        function addSalary(){
+            let name = document.getElementById("name").value;
+            let salary = document.getElementById("salary").value;
+            
+            if (name == ""){
+                document.getElementById("namenull").innerHTML = "Please Enter Name";
+                alert("Please Enter Name");
+            }
+            if (salary == ""){
+                document.getElementById("salarynull").innerHTML = "Please Enter Salary";
+                alert("Please Enter Salary");
+            }
+            if (name != "" && salary!= ""){
+                person.push(name);
+                salaries.push(salary);
+                alert("Added Successfully!");
+            }     
+        }
+        function displayResults(){
+            var highest = 0, average = 0;
+            for (var j = 0; j < salaries.length; j++){
+				salaryTotal += salaries[j];
+                average = (salaryTotal/salaries.length);
+                if (salaries[j] > highest){
+                    highest = salaries[j];
+                }
+            }
+            if (salaries.length != 0){
+                average = average/salaries.length;
+            }
+            let result = document.getElementById("results");
+            result.innerHTML = "<h2>Highest Salary</h2>";
+            result.innerHTML += "<p>" + highest + "</p>";
+            result.innerHTML += "<h2>Average Salary</h2>";
+            result.innerHTML += "<p>" + average + "</p>"
+        }
+        function displaySalary(){
+            let table = document.getElementById("result_table");
+            table.innerHTML = "<tr><th>Name</th><th>Salary</th></tr>";
+            for (var j = 0; j < person.length; j++){
+                table.innerHTML += "<tr><td>" + person[j] + "</td><td>" + salaries[j] + "</td></tr>";
+            }
+        }
+        function displayEmployees(){
+            let employees = document.getElementById("employees");
+            employees.innerHTML = "";
+            for (var j = 0; j < person.length; j++){
+                employees.innerHTML += "<option>" + person[j] + "</option>";
+            }      
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Add Salary</h2>
+        <label>Enter Name : <input type="text" id="name" required autofocus><span id="namenull"></span></label> <br>
+        <label>Enter Salary : <input type="number" id="salary" required><span id="salarynull"></span></label><br>
+        <button onclick="addSalary()">Add Salary</button>
+    </div>
+    <hr>
+    <div>
+        <h2>Display Salary</h2>
+        <button onclick="displaySalary()">Display Salary</button>
+        <table id="result_table"></table>
+    </div>
+    <hr>
+    <div>
+        <h2>Display Result</h2>
+        <button onclick="displayResults()">Display Result</button>
+        <div id="results"></div>
+    </div>
+    <hr>
+    <div>
+        <h2>Display Employees</h2>
+        <button onclick="displayEmployees()">Display Employees In Dropdown</button><br>
+        <select id="employees"></select>
+    </div>
+</body>
+</html>
