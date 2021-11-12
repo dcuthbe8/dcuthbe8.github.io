@@ -1,0 +1,36 @@
+:root {
+    background-color: #48C6A5;
+    font-family: sans-serif;
+}
+h1 {
+    color: #A77EDA;
+    letter-spacing: 4px;
+    background-color: #545454;
+    font-size: 3.5em;
+    border: dashed 10px rgb(211, 193, 132);
+    text-align: center;
+    box-shadow: 10px 10px 10px black;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+h2{
+    background-color: #545454;
+    
+    margin-right: 42%;
+    text-align: center;
+    color:  #A77EDA;
+    box-shadow: 2px 2px 10px black;
+    letter-spacing: 3px;
+}
+nav {
+    font-size: 30px;
+}
+.cssPage {
+    
+    
+    margin-left: 15%;
+    margin-right: 15%;
+    height: auto;
+    padding-left: 0%;
+    padding-bottom: 5%;
+}
