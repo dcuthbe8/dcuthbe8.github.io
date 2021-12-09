@@ -1,0 +1,6 @@
+Boot Camp Curriculum
+<p> 1.git basics</p>
+<p> 2.html foundations</p>
+<p> 3.css foundations</p>
+<p> 4.flexbox</p>
+<p> 5.javascript basics</p>
